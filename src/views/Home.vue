@@ -2,7 +2,7 @@
   <div class="home">
     <v-container>
         <v-layout row wrap>
-          <v-flex v-for="(item, index) in items" :key="index" xs12 sm3>
+          <v-flex v-for="(item, index) in items" :key="index" xs12 sm6 md4 lg3 xl2>
             <v-card
             class="project"
             >
@@ -14,11 +14,17 @@
               </v-img>
               <v-card-subtitle>
                 <div class="subtitle-wrap">
-                  <span class="mb-4">{{item.company}}</span>
-                  <span>
-                    <v-icon class="mr-1" small>mdi-clock-time-three-outline</v-icon>
-                    {{item.time}}
-                  </span>
+                  <div class="mb-4">
+                    <span>{{item.company}}</span>
+                  </div>
+                  <div>
+                    <!-- <span>
+                      <v-icon class="mr-1" small>mdi-clock-time-three-outline</v-icon>
+                    </span> -->
+                    <span>
+                      {{item.time}}
+                    </span>
+                  </div>
                 </div>
                 <span>
                   <v-chip
@@ -42,6 +48,7 @@
 
 <script>
 // @ is an alias to /src
+import projects from '@/model/project'
 
 export default {
   name: 'Home',
@@ -49,59 +56,7 @@ export default {
 
   },
   data: () => ({
-    items: [{
-      src: 'https://vue-native.io/images/landing.png',
-      title: '프로젝트1',
-      company: '한국인증서비스(주)',
-      time: '2개월',
-      skils: [{
-        name: 'vuejs',
-        color: '#42b983'
-      }, {
-        name: 'vutify',
-        color: '#1976d2'
-      }],
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages'
-    }, {
-      src: 'https://vue-native.io/images/landing.png',
-      title: '프로젝트1',
-      company: '한국인증서비스(주)',
-      time: '2개월',
-      skils: [{
-        name: 'vuejs',
-        color: '#42b983'
-      }, {
-        name: 'vutify',
-        color: '#1976d2'
-      }],
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages'
-    }, {
-      src: 'https://vue-native.io/images/landing.png',
-      title: '프로젝트1',
-      company: '한국인증서비스(주)',
-      time: '2개월',
-      skils: [{
-        name: 'vuejs',
-        color: '#42b983'
-      }, {
-        name: 'vutify',
-        color: '#1976d2'
-      }],
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages'
-    }, {
-      src: 'https://vue-native.io/images/landing.png',
-      title: '프로젝트1',
-      company: '한국인증서비스(주)',
-      time: '2개월',
-      skils: [{
-        name: 'vuejs',
-        color: '#42b983'
-      }, {
-        name: 'vutify',
-        color: '#1976d2'
-      }],
-      desc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages'
-    }]
+    items: projects
   })
 }
 </script>
