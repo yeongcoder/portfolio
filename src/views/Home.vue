@@ -1,7 +1,18 @@
 <template>
   <div class="home">
     <v-container>
-        <v-layout row wrap>
+        <v-layout row wrap align-center>
+          <v-flex xs12>
+            <v-chip
+            class="white--text ma-1 chip"
+            v-for="(chip, index) in chips"
+            :key="index"
+            :color="chip.color"
+            small
+            >
+              <span class="skil">{{chip.name}}</span>
+            </v-chip>
+          </v-flex>
           <v-flex v-for="(item, index) in items" :key="index" xs12 sm6 md4 lg3 xl2>
             <v-card
             class="project"
@@ -9,6 +20,9 @@
               <v-img
               class="white--text align-end"
               :src="item.src"
+              cover
+              width="100%"
+              height="250"
               >
                 <v-card-title>{{item.title}}</v-card-title>
               </v-img>
@@ -38,7 +52,9 @@
                   </v-chip>
                 </span>
               </v-card-subtitle>
-              <v-card-text>{{item.desc}}</v-card-text>
+              <v-card-text>
+                <p class="desc">{{item.desc}}</p>
+              </v-card-text>
             </v-card>
           </v-flex>
         </v-layout>
@@ -49,6 +65,7 @@
 <script>
 // @ is an alias to /src
 import projects from '@/model/project'
+import chips from '@/model/chip'
 
 export default {
   name: 'Home',
@@ -56,7 +73,8 @@ export default {
 
   },
   data: () => ({
-    items: projects
+    items: projects,
+    chips: chips
   })
 }
 </script>
@@ -68,6 +86,7 @@ export default {
   .project {
     min-height: 400px;
     transition: all 0.4s;
+    cursor: pointer;
   }
   .project:hover {
     opacity: 0.6;
@@ -78,5 +97,31 @@ export default {
   }
   .skil {
     font-weight: bold;
+  }
+  .desc {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* 라인수 */ 
+    -webkit-box-orient: vertical; 
+    word-wrap:break-word;
+  }
+  .home {
+    height: 100%;
+  }
+  .container {
+    height: 100%;
+  }
+  .layout {
+    height: 100%;
+  }
+  .chip {
+    cursor: pointer;
+  }
+  .chip:hover {
+    opacity: 0.5;
+  }
+  .v-card__title {
+    background-color: rgba(0, 0, 0, 0.247);
   }
 </style>

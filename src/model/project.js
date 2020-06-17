@@ -1,14 +1,11 @@
 module.exports = [{
-    src: 'https://vue-native.io/images/landing.png',
-    title: '프로젝트1',
+    src: require('../assets/onlykcs.png'),
+    title: '회사소개 사이트',
     company: '한국인증서비스(주)',
-    time: '2개월',
+    time: '1주',
     skils: [{
-        name: 'vue.js',
-        color: '#42b983'
-    }, {
-        name: 'vutify',
-        color: '#1976d2'
+        name: "HTML/CSS/JS",
+        color: "#74b9ff"
     }],
     desc: `
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
@@ -19,16 +16,16 @@ module.exports = [{
         It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages
         `
     }, {
-    src: 'https://vue-native.io/images/landing.png',
-    title: '프로젝트1',
+    src: require('../assets/mymach.png'),
+    title: '마하프로젝트 소개 사이트',
     company: '한국인증서비스(주)',
-    time: '2개월',
+    time: '2주',
     skils: [{
-        name: 'vue.js',
-        color: '#42b983'
-    }, {
-        name: 'vutify',
-        color: '#1976d2'
+        name: "HTML/CSS/JS",
+        color: "#74b9ff"
+    },{
+        name: "Vue.js",
+        color: "#02C180"
     }],
     desc: `
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
