@@ -1,18 +1,18 @@
 module.exports = [{
     name: "ALL",
     color: "#2f3542"
-},{
+}, {
     name: "HTML/CSS/JS",
     color: "#74b9ff"
+},{
+    name: "JavaScript",
+    color: "#F7E017"
 }, {
     name: "Jquery",
     color: "#0B67AB"
 }, {
     name: "Express.js",
     color: "#FD9326"
-}, {
-    name: "ECMAScript",
-    color: "#F7E017"
 }, {
     name: "TypeScript",
     color: "#007ACD"
@@ -46,12 +46,6 @@ module.exports = [{
 }, {
     name: "Swift",
     color: "#F05237"
-}, {
-    name: "Android",
-    color: "#9ACC00"
-}, {
-    name: "IOS",
-    color: "#D5D5D5"
 }, {
     name: "Java",
     color: "#E77002"
